@@ -25,6 +25,10 @@ export const useTasks = () => {
     task.completed = !task.completed;
   };
 
+  const removeTask = (id: string) => {
+    tasks.value = tasks.value.filter((task) => task.id !== id);
+  };
+
   watch(
     tasks,
     (newTask) => {
@@ -33,7 +37,7 @@ export const useTasks = () => {
     { deep: true }
   );
 
-  return { tasks, addTask, toggleTask };
+  return { tasks, addTask, toggleTask, removeTask };
 };
 
 export const useFilters = () => {
