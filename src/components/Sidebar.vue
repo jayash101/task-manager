@@ -60,4 +60,46 @@ watch(filter, () => {
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    padding: 2.5vh 2vw;
+  }
+
+  .sidebar button {
+    padding: 1vh 2vw;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    gap: 2vw;
+    padding: 2vh 2vw;
+    overflow-x: auto;
+  }
+
+  .sidebar button {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 1vh 4vw;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 1.5vh 2vw;
+    gap: 3vw;
+  }
+
+  .sidebar button {
+    padding: 1vh 5vw;
+    font-size: 0.9rem;
+  }
+}
 </style>

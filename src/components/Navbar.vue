@@ -30,7 +30,7 @@ nav {
 }
 
 nav ul {
-  padding: 2vh 1vw;
+  padding: 2vh 2vw;
   display: flex;
   justify-content: center;
   gap: 1.75rem;
@@ -48,5 +48,45 @@ nav ul {
 
 .active {
   color: #ed2;
+}
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  nav ul {
+    padding: 2vh 4vw;
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  nav {
+    min-height: auto;
+  }
+
+  nav ul {
+    width: 80%;
+    margin-top: 2vh;
+    justify-content: space-around;
+    padding: 2vh 4vw;
+    border-radius: 1rem;
+    gap: 0;
+  }
+
+  .link {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    padding: 1.5vh 3vw;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
 }
 </style>

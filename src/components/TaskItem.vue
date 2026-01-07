@@ -156,4 +156,70 @@ const { toggleTask } = useTasks();
 .hidden {
   display: none;
 }
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .todo-item {
+    width: 100%;
+    padding: 2vw;
+    gap: 2vh;
+  }
+
+  .todo-item article {
+    gap: 2vw;
+  }
+
+  .button-container {
+    gap: 2vw;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .todo-item {
+    width: 100%;
+    padding: 3vw;
+  }
+
+  .todo-item article {
+    align-items: flex-start;
+  }
+
+  .todo-item article p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .check-btn {
+    padding: 1.5vw;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5vh;
+  }
+
+  .remove-btn,
+  .details-btn button {
+    width: 100%;
+    padding: 1.2vh 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .todo-item {
+    padding: 4vw;
+  }
+
+  .todo-item article p {
+    font-size: 0.9rem;
+  }
+
+  .check-btn {
+    padding: 2vw;
+  }
+}
 </style>

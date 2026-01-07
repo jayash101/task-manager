@@ -117,4 +117,75 @@ import TaskList from "../components/TaskList.vue";
 .tasks ul li {
   padding: 1vw;
 }
+
+@media (max-width: 1024px) {
+  .home-section {
+    padding: 6vh 4vw;
+    gap: 6vh;
+  }
+
+  .hero-section article h1 {
+    font-size: 2.5rem;
+  }
+
+  .tasks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5vh 4vw 4vh;
+  }
+
+  .hero-section article h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-section article p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .cta button {
+    padding: 1.2vh 4vw;
+    font-size: 1rem;
+  }
+
+  .featured-tasks article {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vh;
+  }
+
+  .tasks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section {
+    padding: 4vh 4vw;
+    gap: 5vh;
+  }
+
+  .hero-section article h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section article p {
+    font-size: 0.95rem;
+  }
+
+  .tasks {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks ul li {
+    padding: 4vw;
+  }
+}
 </style>

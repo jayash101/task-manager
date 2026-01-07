@@ -70,4 +70,67 @@ const { filter } = useFilters();
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2vw;
 }
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .tasks-section {
+    gap: 3vw;
+    padding: 6vh 2vw;
+  }
+
+  .tasks ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3vw;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .tasks-section {
+    flex-direction: column;
+    padding: 5vh 4vw;
+    gap: 4vh;
+  }
+
+  /* Sidebar stacks on top */
+  .tasks-section > *:first-child {
+    width: 100%;
+  }
+
+  .tasks-top-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+  }
+
+  .tasks-top-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .tasks-top-section button {
+    padding: 1.2vh 4vw;
+    font-size: 1rem;
+  }
+
+  .tasks ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4vw;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .tasks-section {
+    padding: 4vh 4vw;
+  }
+
+  .tasks-top-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .tasks ul {
+    grid-template-columns: 1fr;
+    gap: 4vh;
+  }
+}
 </style>

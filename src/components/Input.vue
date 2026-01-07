@@ -49,4 +49,40 @@ const model = defineModel<string>();
 .label-section input:disabled {
   background-color: #fff;
 }
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .label-section input {
+    font-size: 0.9rem;
+    padding: 1.2vh 1.5vw;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .label-section {
+    gap: 1.5vh;
+  }
+
+  .label-section label {
+    font-size: 0.95rem;
+  }
+
+  .label-section input {
+    font-size: 1rem;
+    padding: 1.4vh 3vw;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .label-section label {
+    font-size: 0.9rem;
+  }
+
+  .label-section input {
+    font-size: 0.95rem;
+    padding: 1.6vh 4vw;
+  }
+}
 </style>
