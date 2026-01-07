@@ -1,5 +1,9 @@
 <template>
-  <TaskItem v-for="task in filteredTasks" :task="task" />
+  <TaskItem
+    v-for="task in filteredTasks"
+    :task="task"
+    @remove="removeTask(task.id)"
+  />
 </template>
 
 <script setup lang="ts">
@@ -11,7 +15,7 @@ const props = defineProps<{
   link?: string;
 }>();
 
-const { tasks } = useTasks();
+const { tasks, removeTask } = useTasks();
 const { filter } = useFilters();
 
 const filteredTasks = computed(() => {
