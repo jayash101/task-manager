@@ -88,4 +88,55 @@ watch(title, (newSlug) => {
 .submit-task:hover {
   filter: contrast(1.25);
 }
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .add-tasks-section {
+    padding: 4vh 4vw;
+    gap: 3vh;
+  }
+
+  .form {
+    padding: 3vh 3vw;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .add-tasks-section {
+    padding: 3vh 4vw;
+  }
+
+  .add-tasks-section h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .form {
+    padding: 3vh 4vw;
+    gap: 2.5vh;
+  }
+
+  .submit-task {
+    width: 100%;
+    padding: 1.5vh 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .add-tasks-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .form {
+    padding: 3vh 5vw;
+  }
+
+  .submit-task {
+    font-size: 0.95rem;
+  }
+}
 </style>
