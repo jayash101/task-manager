@@ -26,7 +26,7 @@
       </button>
 
       <RouterLink
-        :to="`/tasks/${task.id}`"
+        :to="`/task/${task.id}`"
         class="details-btn"
         :style="{ margin: route.path === '/' ? '0 auto' : 'none' }"
       >
