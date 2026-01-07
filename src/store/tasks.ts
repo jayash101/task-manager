@@ -1,10 +1,10 @@
-import { ref } from "vue";
-import type { Task } from "../types/task.types";
+import { ref, watch } from "vue";
+import type { Filter, Task } from "../types/task.types";
 
-const tasks = ref<Task[]>([
-  { id: "learn-vue", title: "Learn Vue", completed: false },
-  { id: "build-projects", title: "Build projects", completed: false },
-]);
+const savedTasks = localStorage.getItem("tasks");
+
+const tasks = ref<Task[]>(savedTasks ? JSON.parse(savedTasks) : []);
+const filter = ref<Filter>("all");
 
 export const useTasks = () => {
   const addTask = (title: string) => {
@@ -20,10 +20,26 @@ export const useTasks = () => {
   const toggleTask = (id: string) => {
     const task = tasks.value.find((t) => t.id === id);
 
-    if (!task) return "Task not found";
+    if (!task) return;
 
     task.completed = !task.completed;
   };
 
+  watch(
+    tasks,
+    (newTask) => {
+      localStorage.setItem("tasks", JSON.stringify(newTask));
+    },
+    { deep: true }
+  );
+
   return { tasks, addTask, toggleTask };
+};
+
+export const useFilters = () => {
+  const setFilter = (value: Filter) => {
+    filter.value = value;
+  };
+
+  return { filter, setFilter };
 };

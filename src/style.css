@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
 }
 
 html,
@@ -38,4 +41,13 @@ img {
 
 video {
   aspect-ratio: 16/9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #03045e;
 }

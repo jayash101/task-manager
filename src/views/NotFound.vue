@@ -9,9 +9,13 @@
 <style scoped>
 .not-found-section {
   width: 100%;
-  height: 100vh;
+  min-height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 </style>

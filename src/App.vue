@@ -1,9 +1,5 @@
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/tasks">Tasks</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav>
+  <Navbar />
 
   <main>
     <RouterView />
@@ -11,7 +7,14 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+
+import Navbar from "./components/Navbar.vue";
 </script>
 
-<style scoped></style>
+<style scoped>
+main {
+  min-height: 90vh;
+  padding: 0 2vw;
+}
+</style>
