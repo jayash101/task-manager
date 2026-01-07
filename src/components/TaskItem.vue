@@ -22,7 +22,7 @@
         class="remove-btn"
         :class="{ hidden: route.path === '/' }"
       >
-        Remove
+        Delete
       </button>
 
       <RouterLink
