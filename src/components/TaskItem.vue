@@ -51,7 +51,7 @@ const emit = defineEmits<{
 
 const route = useRoute();
 
-const { toggleTask, removeTask } = useTasks();
+const { toggleTask } = useTasks();
 </script>
 
 <style scoped>
